@@ -18,7 +18,9 @@ RUN  apt-get update \
 	&& git clone https://github.com/numpy/numpy \
 	&& cd numpy \
 	&& git checkout maintenance/1.17.x \
-	&& pip3 install Cython 
+	&& pip3 install Cython teradata \
+	&& Rscript -e "install.packages('teradatasql',repos=c('https://teradata-download.s3.amazonaws.com','https://cloud.r-project.org'))"
+
 
 COPY site.cfg /opt/numpy/site.cfg
 
