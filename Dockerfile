@@ -1,4 +1,4 @@
-FROM semoss/docker:latest
+FROM semoss/docker:R3.6.2-debian10
 
 ENV  LD_LIBRARY_PATH=/opt/OpenBLAS/lib:$LD_LIBRARY_PATH
 
