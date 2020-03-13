@@ -13,7 +13,7 @@ RUN  sudo apt-get update \
 	&& cd OpenBLAS \
 	&& sudo make FC=gfortran \
 	&& sudo make PREFIX=/home/semoss/OpenBLAS install \
-	&& sudo ldconfig \
+	&& ldconfig \
 	&& cd $SEMOSS_BASE \
 	&& git clone https://github.com/numpy/numpy \
 	&& cd numpy \
