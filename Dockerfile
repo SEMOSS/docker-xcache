@@ -17,12 +17,13 @@ RUN  sudo apt-get update \
 	&& cd $SEMOSS_BASE \
 	&& git clone https://github.com/numpy/numpy \
 	&& cd numpy \
-	&& git checkout maintenance/1.17.x \
-	&& pip3 install Cython
+	&& git checkout maintenance/1.17.x
+	
 	
 COPY site.cfg /home/semoss/numpy/site.cfg
 
 RUN cd $SEMOSS_BASE/numpy \
+	&& pip3 install Cython \
 	&& pip3 install .
 
 COPY RDF_Map.prop /home/semoss/semosshome/
