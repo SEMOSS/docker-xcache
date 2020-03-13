@@ -1,6 +1,6 @@
 FROM semoss/docker:user
 
-ENV  LD_LIBRARY_PATH=/opt/OpenBLAS/lib:$LD_LIBRARY_PATH
+ENV  LD_LIBRARY_PATH=/home/semoss/OpenBLAS/lib:$LD_LIBRARY_PATH
 
 RUN  sudo apt-get update \
 	&& pip3 install swifter \
