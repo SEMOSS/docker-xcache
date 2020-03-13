@@ -7,7 +7,7 @@ RUN  sudo apt-get update \
 	&& pip3 install pyarrow \
 	&& R -e "install.packages('fst', repos='http://cran.rstudio.com/')" \
 	&& pip3 uninstall -y numpy \ 
-	&& rm $SEMOSS_BASE/RDF_Map.prop \
+	&& rm $SEMOSS_BASE/semosshome/RDF_Map.prop \
 	&& cd $SEMOSS_BASE \
 	&& git clone https://github.com/xianyi/OpenBLAS \
 	&& cd OpenBLAS \
