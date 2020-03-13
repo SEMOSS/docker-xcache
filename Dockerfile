@@ -2,7 +2,7 @@ FROM semoss/docker:user
 
 ENV  LD_LIBRARY_PATH=/opt/OpenBLAS/lib:$LD_LIBRARY_PATH
 
-RUN  apt-get update \
+RUN  sudo apt-get update \
 	&& pip3 install swifter \
 	&& pip3 install pyarrow \
 	&& R -e "install.packages('fst', repos='http://cran.rstudio.com/')" \
