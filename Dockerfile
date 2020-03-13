@@ -17,7 +17,8 @@ RUN  sudo apt-get update \
 	&& cd $SEMOSS_BASE \
 	&& git clone https://github.com/numpy/numpy \
 	&& cd numpy \
-	&& git checkout maintenance/1.17.x 
+	&& git checkout maintenance/1.17.x \
+	&& pip3 install Cython
 	
 COPY site.cfg /home/semoss/numpy/site.cfg
 
