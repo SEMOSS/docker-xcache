@@ -31,4 +31,6 @@ COPY RDF_Map.prop /opt/semosshome/
 
 WORKDIR /opt/semoss-artifacts/artifacts/scripts
 
+RUN chmod -R 777 /opt
+
 CMD ["start.sh"]
